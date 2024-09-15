@@ -42,3 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener for resize
     window.addEventListener('resize', checkScreenSize);
 });
+
+

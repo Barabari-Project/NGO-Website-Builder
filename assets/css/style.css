@@ -693,6 +693,12 @@ header .small-menu {
   text-align: justify;
   font-size: 0.9rem;
 }
+.about-quick-box{
+  display: flex;
+  flex-wrap: wrap;
+  /* gap:20px;   */
+  row-gap: 20px;
+}
 .about-us .image-part .about-quick-box .about-qcard {
   padding: 50px 30px;
   background-color: #fff;
@@ -701,6 +707,7 @@ header .small-menu {
   border-radius: 15px;
   text-align: center;
   margin-bottom: 30px;
+  height: 100%;
 }
 .about-us .image-part .about-quick-box .about-qcard p {
   font-weight: 600;
