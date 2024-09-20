@@ -1811,12 +1811,13 @@ footer {
 /* Contact Information Section */
 .information {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
 .pagesContainer {
   display: flex;
+  justify-items: center;
   flex-direction: column;
   align-items: center;
 }
@@ -1839,6 +1840,7 @@ footer {
 
 .contact-info li {
   margin-bottom: 1rem;
+  text-align: center;
   color: #fff;
 }
 
