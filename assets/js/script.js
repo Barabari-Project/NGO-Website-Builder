@@ -12,6 +12,41 @@ $( document ).ready(function() {
 });
 
 
+// ================================ Mission Section Start ========================
+
+// Scroll-Triggered Animation Function for One-Time Animation
+function animateOnScroll() {
+  var mvText = document.querySelector('.mv-text');
+  var mvImg = document.querySelector('.mv-img');
+  var rect = mvText.getBoundingClientRect();
+  var windowHeight = window.innerHeight;
+
+  if (rect.top <= windowHeight && rect.bottom >= 0 && !mvText.classList.contains('show')) {
+      mvText.classList.add('show');
+      mvImg.classList.add('show');
+  }
+}
+
+// Listen for the scroll event and trigger the animation
+window.addEventListener('scroll', animateOnScroll);
+
+const slides = document.querySelectorAll('.slider img');
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (index + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+// Automatically switch slides every 3 seconds
+setInterval(() => showSlide(currentSlide + 1), 3000);
+showSlide(currentSlide);
+// ================================ Mission Section End ========================
+
+
+
+
 // ================================ Testimonial Start ========================
 
 $(document).ready(function () {
@@ -61,9 +96,9 @@ const images = [
 ];
 
 const text = [
-  "Enabling candidates from low-income communities to build sustainable livelihoods through freelancing",
-  "A community-rooted, contextualized curriculum that enables students from all backgrounds to access quality tech education.",
-  "Democratizing access to high-income careers in Tech & Design",
+  "Enabling marginalized youth to build sustainable income through freelancing",
+  "Community-rooted Tech & Design vocational programs",
+  "Democratizing ownership of the digital economy",
 ];
 
 const imageTrack = document.getElementById('image-track');
@@ -227,12 +262,29 @@ const numbers = document.querySelectorAll('.number h1');
 
 // ================================ Our-partners Section Start  ========================
 
+// Clone the slider content to create an infinite loop effect
 var copy = document.querySelector(".our-partners-slide").cloneNode(true);
-    document.querySelector(".our-partners").appendChild(copy);
+document.querySelector(".our-partners").appendChild(copy);
+    
     
 
 // ================================ Our-partners Section Start  ========================
 
+
+// ================================ flow animation Section Start  ========================
+
+window.addEventListener('scroll', () => {
+  const section = document.getElementById('image-section');
+  const { top } = section.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // Check if the section is in the viewport
+  if (top < windowHeight && top >= 0) {
+      section.classList.add('active');
+  }
+});
+
+// ================================ flow animation Section End  ========================
 
 
 // footer script
@@ -258,3 +310,90 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
  
+
+// map Start 
+
+FusionCharts.ready(function() {
+  var demoMap = new FusionCharts({
+      type: "maps/india",
+      renderAt: "indian-map",
+      height: "650",
+      width: "100%",
+      dataFormat: "json",
+      dataSource: {
+          "chart": {
+              "subCaption": "Barabari Collective 2024",
+              "captionFontSize": "35",
+              "captionFontBold": "0",
+              "subCaptionFontSize": "18",
+              "subCaptionFontBold": "5",
+              "subCaptionPadding": "20",
+              "canvasPadding": "30",
+              "showBorder": "0",
+              "showCanvasBorder": "0",
+              "legendBorderAlpha": "0",
+              "showLegend": "0",
+              "toolTipPadding": "10",
+              "toolTipColor": "#FFFFFF",
+              "toolTipBgColor": "#000000",
+              "toolTipBgAlpha": "70",
+              "toolTipBorderThickness": "1",
+              "tooltipBorderRadius": "3",
+              "toolTipBorderColor": "#FFFFFF",
+              "toolTipBorderAlpha": "80",
+              "showToolTipShadow": "0",
+              "baseFont": "Lato",
+              "showLabels": "0"  // States names hidden
+          },
+          
+          "data": [
+              { "id": "015", "color": "#4165a5" },
+              { "id": "014", "color": "#4165a5" },
+              { "id": "028", "color": "#4165a5" },
+              { "id": "006", "color": "#4165a5" },
+              { "id": "034", "color": "#4165a5" },
+              { "id": "013", "color": "#4165a5" },
+              { "id": "010", "color": "#4949bf" },
+              { "id": "029", "color": "#4165a5" },
+              { "id": "033", "color": "#373799" },
+              { "id": "005", "color": "#4165a5" },
+              { "id": "030", "color": "#4165a5" },
+              { "id": "003", "color": "#4165a5" },
+              { "id": "025", "color": "#4165a5" },
+              { "id": "022", "color": "#4165a5" },
+              { "id": "024", "color": "#4165a5" },
+              { "id": "032", "color": "#4165a5" },
+              { "id": "023", "color": "#4165a5" },
+              { "id": "004", "color": "#4165a5" },
+              { "id": "035", "color": "#4165a5" },
+              { "id": "016", "color": "#4165a5" },
+              { "id": "026", "color": "#4165a5" },
+              { "id": "007", "color": "#4165a5" },
+              { "id": "020", "color": "#4165a5" },
+              { "id": "012", "color": "#4165a5" },
+              { "id": "009", "color": "#4165a5" },
+              { "id": "008", "color": "#4165a5" },
+              { "id": "021", "color": "#373799" }, // Maharashtra
+              { "id": "002", "color": "#4165a5" },
+              { "id": "017", "color": "#4165a5" },
+              { "id": "011", "color": "#4165a5" },
+              { "id": "019", "color": "#4165a5" },
+              { "id": "018", "color": "#4165a5" },
+              { "id": "031", "color": "#4165a5" },
+              { "id": "027", "color": "#4165a5" },
+              { "id": "037", "color": "#4165a5" }, // Jammu & Kashmir (Correct ID)
+              { "id": "036", "color": "#4949bf" }
+          ]
+      },
+      "events": {
+          "entityRollover": function(evtObj, dataObj) {
+              evtObj.sender.configureLink([{ "id": dataObj.id, "color": "#FFFF00", "alpha": "70" }], 0);  // Yellow color on hover
+          },
+          "entityRollout": function(evtObj, dataObj) {
+              evtObj.sender.configureLink([{ "id": dataObj.id, "color": "#4165a5", "alpha": "100" }], 0);  // Original color after hover
+          }
+      }
+  }).render();	
+});
+
+// map End 
