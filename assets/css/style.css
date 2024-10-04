@@ -10,7 +10,6 @@ Description: This Template is created for Youtubers
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700);
 @import url(https://fonts.googleapis.com/css?family=Arimo:300,400,400italic,700,700italic);
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
-
 /* ===================================== Basic CSS ==================================== */
 * {
   margin: 0px;
@@ -609,13 +608,24 @@ header .small-menu {
 .slider-container {
   position: relative;
   width: 100%;
-  top: 20px;
   overflow: hidden;
   height: 70vh;
+  /* border: 2px solid #444; */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+  /* border-radius: 15px; */
   background-color: transparent;
 }
 
-/* Image Track */
+.color-cover {
+  width: 100%;
+  height: 70vh;
+  background-color: gray;
+  opacity: 20%;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Wrapper for the images, enabling horizontal scrolling */
 .image-track {
   display: flex;
   width: 100vw;
@@ -630,21 +640,19 @@ header .small-menu {
   object-fit: cover;
   flex-shrink: 0;
   transition: transform 1s ease-in-out;
+  /* border-radius: 15px; */
 }
 
-/* Slide Caption */
 .slide-caption {
   position: absolute;
-  bottom: 25%;
-  /* Adjust bottom position */
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   color: #FFCC00;
-  font-size: 2.5em; /* Adjusted for better responsiveness */
-  margin-bottom: 40px; /* Space below heading */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-  font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
+  font-size: 2.2rem;
   text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.1); */
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
@@ -653,55 +661,8 @@ header .small-menu {
   z-index: 10;
 }
 
-.color-cover {
-  width: 100%;
-  height: 70vh;
-  background-color: gray;
-  opacity: 20%;
-  position: absolute;
-  z-index: 2;
-}
-
-/* Center Buttons Styling */
-.center-btn {
-  width: 150px;
-  padding: .5rem .4rem;
-  color: #fff;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s ease, color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin: 10px;
-  transition: all .3s ease;
-}
-
-#btn1 a{
-  color: white;
-}
-
-#btn1 {
-  background: rgb(34, 71, 141);
-}
-
-#btn1:hover {
-  box-shadow: 1px 1px 5px rgb(34, 71, 141);
-  transform: scale(1.1);
-}
-
-.button-container {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  z-index: 10;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
 /* Navigation buttons */
-/* .btn-prev,
+.btn-prev,
 .btn-next {
   position: absolute;
   top: 50%;
@@ -719,19 +680,19 @@ header .small-menu {
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-} */
+}
 
 /* Hover effect for navigation buttons */
-/* .btn-prev:hover,
+.btn-prev:hover,
 .btn-next:hover {
   transform: scale(1.1);
   background-color: white;
   color: black;
   opacity: 80%;
-} */
+}
 
 /* Positioning the buttons */
-/* .btn-prev {
+.btn-prev {
   left: 20px;
   transform: translateX(50%);
 }
@@ -739,101 +700,132 @@ header .small-menu {
 .btn-next {
   right: 20px;
   transform: translateX(-50%);
+}
+
+/* Dots container */
+/* .dot-container {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 } */
 
+/* Individual dot */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+/* Active dot styling */
+/* .dot.active {
+  background-color: #f39c12;
+  transform: scale(1.3);
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.6);
+} */
+
+/* Hover effect on dots */
+/* .dot:hover {
+  background-color: #f39c12;
+  transform: scale(1.2);
+} */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
 
-  /* .btn-prev,
+  .btn-prev,
   .btn-next {
     width: 40px;
     height: 40px;
     font-size: 1.3rem;
-  } */
+  }
 
   .slide-image {
-    height: 60vh;
+    height: 400px;
   }
 
   .slider-container {
-    height: 60vh;
+    height: 44vh;
+  }
+
+  .color-cover {
+    height: 45vh;
   }
 
   .slide-caption {
     bottom: 30%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
 
-  /* .btn-prev,
+  .btn-prev,
   .btn-next {
+
     display: none;
-  } */
+
+  }
 
   .slide-image {
-    height: 40vh;
+    height: 300px;
   }
 
   .slider-container {
-    height: 40vh;
+    height: 37vh;
+  }
+
+  .color-cover {
+    height: 37vh;
   }
 
   .slide-caption {
-    bottom: 25%;
-    font-size: 1.1rem;
+    bottom: 10%;
+    font-size: 1rem;
   }
 
-  .center-btn {
-    width: 100px;
-    font-size: 0.9rem;
+  /* .dot {
+    width: 10px;
+    height: 10px;
+  } */
+}
+
+/* @media (max-width: 765px) {
+  .slider-container{
+    height: 46vh;
+
   }
 }
+@media (max-width: 485px) {
+  .slider-container{
+    height: 37vh;
+  }
+} */
 
 /* ===================================== Slider Style End ================================== */
 
 
 /* ===================================== About Start ================================== */
 
-/* Container Styling */
 .about-us {
-  padding: 70px 0 50px 0;
+  padding: 40px 0;
   background-color: #f9f9f9;
 }
 
-/* Main container for cards */
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Row styling */
-.about-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  /* Space between cards */
-}
-
-/* Column for individual cards */
-.about-column {
-  flex: 1 1 calc(25% - 20px);
-  /* Default: 4 cards in a row with space */
-  max-width: calc(25% - 20px);
-  min-width: 250px;
-  /* Prevents cards from shrinking too much */
-}
-
-/* Card Styling */
 .about-qcard {
+  width: 100%;
+  height: auto;
   background: #fff;
   border-radius: 10px;
   padding: 20px;
-  text-align: center;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -850,7 +842,7 @@ header .small-menu {
   transition: transform 0.4s ease-in-out;
 }
 
-/* Icon Colors */
+
 .volunteer-icon {
   color: #4CAF50;
 }
@@ -867,48 +859,32 @@ header .small-menu {
   color: #2196F3;
 }
 
-/* Icon Hover Effect (rotate and scale) */
+/* Hover Effect for Icons (flip 360deg and scale 1.3) */
 .about-qcard:hover i {
   transform: rotateY(360deg) scale(1.3);
 }
+
 
 /* Text Styling */
 .about-qcard p {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
-  color: #333;
 }
 
 /* Responsive Styling */
-@media (max-width: 1200px) {
-  .about-column {
-    flex: 1 1 calc(33.33% - 20px);
-    /* 3 cards per row */
-    max-width: calc(33.33% - 20px);
-  }
-}
-
-@media (max-width: 992px) {
-  .about-column {
-    flex: 1 1 calc(50% - 20px);
-    /* 2 cards per row */
-    max-width: calc(50% - 20px);
-  }
-}
-
 @media (max-width: 768px) {
-  .about-column {
-    flex: 1 1 calc(50% - 20px);
-    /* Still 2 cards per row, comfortable on smaller tablets */
-    max-width: calc(50% - 20px);
+  .col-md-3 {
+    flex: 0 0 48%;
+    max-width: 48%;
   }
 }
 
 @media (max-width: 576px) {
-  .about-column {
-    flex: 1 1 100%;
-    /* 1 card per row */
+
+  .col-md-3,
+  .col-sm-6 {
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
@@ -922,300 +898,41 @@ header .small-menu {
 
 
 /* ===================================== Mission Vision CSS ================================== */
-
-section.mission-vision {
-  margin-top: 1.2rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(34, 71, 141);
-  padding: 60px 20px;
+.mission-vision {
+  background-color: #fff;
 }
 
-.mission-vision-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1200px;
+.mission-vision .mission {
+  padding: 50px;
 }
 
-.mv-text {
-  flex: 1;
-  padding: 20px;
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
-.mv-text.show {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.mv-text h1 {
-  font-size: 2.5em; /* Adjusted for better responsiveness */
-  font-weight: bold;
-  color: #FFCB33;
-  margin-bottom: 40px; /* Space below heading */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-}
-
-.mv-text p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 10px 0;
-  color: #d1d5db;
-  /* Light gray text */
-}
-
-.mv-text p i {
-  color: #fbbf24;
-  /* Yellow icon color */
-  margin-right: 10px;
-}
-
-.mv-img {
-  flex: 1;
-  padding: 20px;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
-.mv-img.show {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.slider {
-  width: 100%;
-  position: relative;
-  border-radius: .5rem;
-  overflow: hidden; /* Prevent overflow of images */
-  height: 300px; /* Set a fixed height */
-}
-
-.slider img {
-  width: 100%;
-  height: 100%; /* Make images fill the height */
-  position: absolute; /* Position them absolutely */
-  top: 0; /* Align to top */
-  left: 0; /* Align to left */
-  opacity: 0; /* Initially hide images */
-  transition: opacity 1s ease-in-out; /* Smooth transition */
-}
-
-.slider img.active {
-  opacity: 1; /* Show active image */
-}
-
-/* Shape Styling and Floating Animation */
-.shape {
-  position: absolute;
-  background-color: rgba(0, 123, 255, 0.2);
-  border-radius: 50%;
-}
-
-.shape1,
-.shape2,
-.shape3,
-.shape4 {
-  animation: floatShapes 5s ease-in-out infinite;
-}
-
-.shape1 {
-  width: 150px;
-  height: 150px;
-  top: 20%;
-  left: 0%;
-}
-
-.shape2 {
-  width: 200px;
-  height: 200px;
-  bottom: 20%;
-  left: 5%;
-}
-
-.shape3 {
-  width: 120px;
-  height: 120px;
-  top: 80%;
-  right: 10%;
-}
-
-.shape4 {
-  width: 180px;
-  height: 180px;
-  bottom: 10%;
-  right: 15%;
-}
-
-/* Keyframes for Floating Shapes Animation */
-@keyframes floatShapes {
-  0% {
-      transform: translate(0, 0);
-  }
-
-  50% {
-      transform: translate(30px, -30px);
-  }
-
-  100% {
-      transform: translate(0, 0);
+@media screen and (max-width: 940px) {
+  .mission-vision .mission {
+    padding: 30px 10px;
   }
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .mission-vision-container {
-      flex-direction: column;
-      text-align: center;
-      display: inline-block;
-  }
+.mission-vision .vision {
+  padding: 50px;
+}
 
-  .mv-text,
-  .mv-img {
-      max-width: 100%;
-      padding: 10px;
-      flex: none; /* Prevents flex shrinking */
-  }
-
-  .mv-text h1 {
-      font-size: 2rem;
-  }
-
-  .mv-text p {
-      font-size: 1rem;
-  }
-
-  .slider {
-      height: 200px; /* Adjust height for smaller screens */
+@media screen and (max-width: 940px) {
+  .mission-vision .vision {
+    padding: 30px 10px;
   }
 }
 
-@media (max-width: 768px) {
-  .mv-text h1 {
-      font-size: 1.8rem;
-  }
-
-  .mv-text p {
-      font-size: 0.95rem;
-  }
-
-  .shape {
-      display: none; /* Optionally hide shapes on smaller screens */
-  }
+.mission-vision .mv-det {
+  margin: auto;
 }
-
-@media (max-width: 480px) {
-  .mv-text h1 {
-      font-size: 1.5rem;
-  }
-
-  .mv-text p {
-      font-size: 0.9rem;
-  }
-
-  .slider {
-      height: 150px; /* Further adjust height for very small screens */
-  }
-}
-
-
-/* ===================================== Our Supported Start ================================== */
-
-.Supportive {
-  padding: 4rem 2rem;
-  text-align: center; /* Center text in container */
-  margin: 0; /* Remove margin */
-  animation: float 6s ease-in-out infinite; /* Infinite float animation */
-}
-
-/* Float animation */
-@keyframes float {
-  0%, 100% {
-      transform: translateY(0); /* No vertical movement */
-  }
-  50% {
-      transform: translateY(-10px); /* Float up by 10px */
-  }
-}
-
-/* Responsive h1 */
-.Supportive h1 {
-  font-size: 2.5em; /* Adjusted for better responsiveness */
-  font-weight: bold;
-  color: #FFCB33;
-  margin-bottom: 40px; /* Space below heading */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-}
-
-.Supportive-card-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center cards */
-  align-items: center; /* Center cards vertically */
-  flex-wrap: wrap; /* Wrap cards on smaller screens */
-  gap: 20px; /* Space between cards */
-  padding: 0 20px; /* Padding for responsiveness */
-}
-
-.Supportive-card {
-  height: 14.4rem;
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside cards */
-  width: 300px; /* Fixed width for cards */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
-  display: flex; /* Use flexbox for centering content */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-}
-
-.Supportive-card:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
-}
-
-.Supportive-card img {
-  border-radius: 10px; /* Rounded corners for images */
-  max-width: 100%; /* Responsive image size */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Center images */
-}
-
-h2 {
-  font-size: 1.5em; /* Medium heading font size */
-  margin: 15px 0; /* Space above and below heading */
-}
-
-/* ===================================== Our Supported End ================================== */
-
-
 
 /* ===================================== Our Partners Start ================================== */
 
-.our-partners-section {
-  background-color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-/* Heading Styling */
-.partners-heading {
-  font-size: 2.5em; /* Adjusted for better responsiveness */
-  font-weight: bold;
-  color: #FFCB33;
-  margin-bottom: 40px; /* Space below heading */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-}
 .our-partners {
   overflow: hidden;
-  padding: 40px 0;
+  padding: 60px 0;
   display: flex;
+  background: white;
   position: relative;
 }
 
@@ -1223,7 +940,7 @@ h2 {
 .our-partners:after {
   position: absolute;
   top: 0;
-  width: 50px;
+  width: 100px;
   height: 100%;
   content: "";
   z-index: 2;
@@ -1239,19 +956,20 @@ h2 {
   background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
 }
 
+.our-partners:hover .our-partners-slide {
+  animation-play-state: paused;
+}
+
 .our-partners-slide {
   display: flex;
   white-space: nowrap;
-  animation: slide 8s linear infinite;
-  margin-left: 0;
-  /* Remove any extra margin on the left */
+  animation: 10s slide infinite linear;
 }
 
 @keyframes slide {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-100%);
   }
@@ -1259,69 +977,103 @@ h2 {
 
 .our-partners-card {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Make the image and text stack vertically */
+  align-items: center; /* Center the image horizontally */
+  justify-content: center; /* Center the content within the card */
   background-color: #fff;
-  margin: 0 10px;
-  /* Normal gap between cards */
-  padding: 20px;
-  width: 200px;
+  box-shadow: 0px;
+  border-radius: 10px;
+  margin: 0 8px;
+  padding: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 260px;
   height: auto;
   overflow: hidden;
+  position: relative; /* Enable absolute positioning for text */
+}
+
+
+.our-partners-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Space between the image and text */
 }
 
 .card-image img {
-  width: 100%;
-  flex-shrink: 0;
+  width: 120px;
+  border-radius: 10px;
   height: auto;
   display: block;
 }
 
-/* Larger screens (desktops) */
-@media (min-width: 1024px) {
-  .our-partners-card {
-    width: 200px;
-    /* Small width for larger screens */
-    padding: 20px;
-
-  }
+.our-partners-card:hover .card-image {
+  filter: blur(5px);
 }
 
-/* Medium screens (tablets) */
-@media (max-width: 1024px) {
-  .our-partners-card {
-    width: 220px;
-    padding: 20px;
-
-  }
+.card-text {
+  text-align: center; /* Center the text */
+  position: absolute;
+  bottom: -100px; /* Initially hide text below the card */
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.5s ease;
 }
 
-/* Small screens (phones) */
+.our-partners-card:hover .card-text {
+  bottom: 0; /* Slide text into view */
+}
+
+.card-text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #FFC107;
+  text-shadow: 1px 1px 1px black;
+}
+
 @media (max-width: 768px) {
   .our-partners-card {
-    width: 180px;
-    padding: 15px;
+    width: 260px;
   }
 
-  .our-partners-slide {
-    animation: slide 15s linear infinite;
-    /* Faster slide for mobile */
+  .our-partners-card:hover .card-image {
+    filter: blur(0px);
+  }
+
+  .card-text h3 {
+    font-size: 18px;
   }
 }
 
-/* Extra small screens (small phones) */
 @media (max-width: 480px) {
   .our-partners-card {
-    width: 150px;
-    margin: 0 5px;
-    padding: 15px;
+    flex-direction:row;
+    padding: 10px;
+    width: 120px;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
   }
 
   .card-image img {
-    max-width: 100%;
-    /* Ensure the image takes full width on small screens */
+    width: 100%;
+    height: auto;
+  }
+
+  .card-text h3 {
+    display: none;
   }
 }
-
 
 /* ===================================== Our Partners End ================================== */
 
@@ -1363,7 +1115,7 @@ h2 {
 .our-impact {
   text-align: center;
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, rgba(74, 109, 173, 0.973), rgb(43, 80, 148));
+  background: linear-gradient(135deg, rgba(50, 68, 152, 0.8), rgba(55, 73, 151, 0.548));
   background-size: 200% 200%;
   animation: gradientAnimation 20s ease infinite;
   color: #fcfcfc;
@@ -1378,7 +1130,7 @@ h2 {
   content: "";
   position: absolute;
   border-radius: 50%;
-  background: rgba(176, 177, 170, 0.3);
+  background: rgba(150, 155, 80, 0.3);
   filter: blur(70px);
   z-index: 0;
   animation: float 20s ease-in-out infinite;
@@ -1402,7 +1154,6 @@ h2 {
 
 #our-impact {
   color: #fcfcfc;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
@@ -1528,20 +1279,19 @@ h2 {
   position: absolute;
   border-radius: 50%;
   filter: blur(10px);
-  animation: float 8s ease-in-out infinite;
+  animation: float 15s ease-in-out infinite;
 }
 
 .our-impact .two {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(9, 17, 51, 0.6) 0%, rgba(50, 68, 152, 0.4) 100%);
+  background: radial-gradient(circle, rgba(50, 68, 152, 0.6) 0%, rgba(50, 68, 152, 0.4) 100%);
   top: 60%;
   right: -30%;
   position: absolute;
   border-radius: 50%;
-  border: .5rem solid white;
   filter: blur(10px);
-  animation: float 8s ease-in-out infinite;
+  animation: float 15s ease-in-out infinite;
 }
 
 .our-impact .mini-one,
@@ -1551,7 +1301,7 @@ h2 {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(circle, #ffcb33 0%, #a58a3941 100%);
-  animation: float 2s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
   z-index: -999;
 }
 
@@ -1612,340 +1362,66 @@ h2 {
 
 
 /* ===================================== Our Blog CSS ================================== */
-
 .our-blog {
-  margin: 40px 0;
+  background-color: #fdfdfd;
+  padding: 40px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+@media screen and (max-width: 967px) {
+  .our-blog {
+    padding: 30px 0px;
+  }
 }
 
-/* Section Title */
-.session-title {
-  text-align: center;
-  margin-bottom: 40px;
+.our-blog .single-blog {
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65),
+    0 2px 6px 0 rgba(206, 206, 238, 0.54);
 }
 
-.session-title h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
+.our-blog .single-blog figure {
+  margin-bottom: 5px;
 }
 
-.session-title p {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffd500;
-}
-
-/* Blog Row */
-.blog-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  /* Space between cards */
-}
-
-/* Individual Blog Card */
-.single-blog {
-  flex: 1 1 calc(33.33% - 20px);
-  /* Default: 3 cards per row */
-  max-width: calc(33.33% - 20px);
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.single-blog:hover {
-  transform: translateY(-5px);
-}
-
-/* Image Styling */
-.single-blog figure {
-  margin: 0;
-  height: 250px;
-  overflow: hidden;
-}
-
-.onsiteCenter {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Blog Details */
-.blog-detail {
+.our-blog .single-blog .blog-detail {
   padding: 15px;
-  text-align: center;
 }
 
-.blog-detail small {
-  display: block;
-  font-size: 0.9rem;
-  color: #777;
+.our-blog .single-blog small {
+  color: #71b61b;
+  font-size: 12px;
 }
 
-.blog-detail h4 {
+.our-blog .single-blog h4 {
   font-size: 1.2rem;
-  margin: 10px 0 0;
-  color: #333;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .single-blog {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 576px) {
-  .single-blog {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-/* ===================================== Our Blog End ================================== */
-
-/* ===================================== team start ================================== */
-
-.team-section {
-  text-align: center;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-  padding: 40px 1rem 70px 1rem;
-}
-
-.team-section h2 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.team-section p {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffcb33;
-  margin-bottom: 40px;
-}
-
-.team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.team-card {
-  perspective: 1000px;
-  position: relative;
-  /* For animated shapes */
-}
-
-.team-member {
-  width: 100%;
-  height: 350px;
-  position: relative;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.team-card:hover .team-member {
-  transform: rotateY(180deg);
-}
-
-.team-member .front,
-.team-member .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.team-member .front {
-  background-color: rgb(34, 71, 141);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  overflow: hidden;
-  /* Prevents shapes from overflowing */
-}
-
-/* Animated Shapes */
-.team-shape {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.5;
-  filter: blur(3px);
-  animation: float 4s infinite;
-}
-
-.team-shape1 {
-  width: 80px;
-  height: 80px;
-  background-color: rgb(66, 106, 179);
-  top: 4%;
-  left: -12%;
-  animation-delay: 0s;
-}
-
-.team-shape2 {
-  width: 50px;
-  height: 50px;
-  background-color: rgb(66, 106, 179);
-  bottom: 20%;
-  right: -4%;
-  animation-delay: 1s;
-}
-
-.team-shape3 {
-  width: 120px;
-  height: 120px;
-  background-color: rgb(66, 106, 179);
-  top: 70%;
-  left: -18%;
-  animation-delay: 0s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.team-member img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin-bottom: 25px;
-  z-index: 2;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border: 2px solid white;
-}
-
-.team-member h3 {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.team-member p {
-  color: #ffcb33;
-  font-size: 1rem;
+.our-blog .single-blog p {
+  text-align: justify;
+  text-indent: 20px;
 }
 
-.team-member .back {
-  background-color: #333;
-  color: white;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.our-blog .single-blog .link a {
+  font-size: 12px;
+  color: #71b61b;
 }
 
-.team-member .back h4 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: white;
+.our-blog .single-blog .link i {
+  padding-top: 6px;
+  margin-left: 5px;
+  color: #ffffff;
 }
-
-.team-member .back p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #ffcb33;
-}
-
-.team-member .back .social-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.team-member .back .social-icons a {
-  color: white;
-  /* background: #ffcb33; */
-  background-color: black;
-  border-radius: 50%;
-  padding: 0.75rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.team-member .back .social-icons a:hover {
-  transform: scale(1.2);
-  color: #FFC107;
-}
-
-@media (max-width: 768px) {
-  .team-section h2 {
-    font-size: 2.5rem;
-  }
-
-  .team-section p {
-    font-size: 1rem;
-  }
-
-  .team-member {
-    height: 300px;
-  }
-}
-
-/* ===================================== team End ================================== */
-
-/* ===================================== Map Start ================================== */
-
-#box {
-  position: absolute;
-  top: 95%;
-  left: 0;
-  /* Set to 0 to stick to the right */
-  padding: 20px;
-  width: 180px;
-  background-color: white;
-}
-
-/* ===================================== Map End ================================== */
-
-
 
 /* ===================================== Testimonial End ================================== */
- 
+/* 
 
 .testimonial-section {
   width: 100%;
   height: auto;
-  padding: 3rem 2rem;
+  padding: 3rem 0.5rem;
   background: rgb(17, 24, 39);
   position: relative;
   overflow: hidden;
@@ -2008,7 +1484,7 @@ h2 {
   text-align: center;
   max-width: 800px;
   padding: 20px;
-  background: #111111c7;
+  background: #111;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -2089,7 +1565,7 @@ h2 {
   100% {
     transform: scale(1);
   }
-}
+} */
 
 /* ===================================== Testimonial End ================================== */
 
@@ -2263,296 +1739,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-
-/* ===================================== flow animation css start  ================================== */
-
-.flow-card-container {
-  padding: 5rem;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  gap: 1rem;
-  opacity: 0;
-  transform: translateY(10vw);
-  transition: all 1.2s ease-out;
-}
-
-.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.flow-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  flex: 1 1 calc(20% - 1rem);
-  max-width: 200px;
-}
-
-.flow-card img {
-  display: block;
-  filter: drop-shadow(0 0.3rem 0.40rem rgba(0, 0, 0, 0.2));
-  animation: float 4s ease-in-out infinite;
-  height: auto;
-  transition: all 0.3s ease;
-}
-
-.flow-card-1 img {
-  padding-top: 8.5rem;
-  width: 120px;
-}
-
-.flow-card-2 img {
-  padding-top: 6rem;
-  width: 140px;
-}
-
-.flow-card-3 img {
-  padding-top: 4rem;
-  width: 160px;
-}
-
-.flow-card-4 img {
-  padding-top: 2rem;
-  width: 180px;
-}
-
-.flow-card-5 img {
-  width: 200px;
-}
-
-.flow-card .flow-card-text h3 {
-  margin-top: 5px;
-  font-size: 1.2rem;
-  text-align: center;
-  color: #333;
-}
-
-.flow-card .flow-card-text p {
-  margin-top: 5px;
-  font-size: 1rem;
-  color: #555;
-  text-align: center;
-  padding: 0 10px;
-}
-
-.flow-card-text {
-  position: relative;
-}
-
-.flow-card-text-1 {
-  top: 2rem;
-  left: -4rem;
-}
-
-.flow-card-text-2 {
-  top: 2rem;
-  left: -2rem;
-}
-
-.flow-card-text-3 {
-  top: 2rem;
-}
-
-.flow-card-text-4 {
-  top: 2rem;
-  right: -4rem;
-}
-
-.flow-card-text-5 {
-  top: 1rem;
-  right: -6rem;
-}
-
-@keyframes float {
-  0% {
-      transform: translateY(0);
-  }
-
-  50% {
-      transform: translateY(-20px);
-  }
-
-  100% {
-      transform: translateY(0);
-  }
-}
-
-@media (max-width: 1200px) {
-  .flow-card-1 img {
-      padding-top: 8.5rem;
-      width: 100px;
-  }
-
-  .flow-card-2 img {
-      padding-top: 6rem;
-      width: 120px;
-  }
-
-  .flow-card-3 img {
-      padding-top: 4rem;
-      width: 140px;
-  }
-
-  .flow-card-4 img {
-      padding-top: 2rem;
-      width: 160px;
-  }
-
-  .flow-card-5 img {
-      width: 180px;
-  }
-}
-
-@media (max-width: 992px) {
-  .flow-card-1 img {
-      padding-top: 7.6rem;
-      width: 100px;
-  }
-
-  .flow-card-2 img {
-      padding-top: 6rem;
-      width: 100px;
-  }
-
-  .flow-card-3 img {
-      padding-top: 4rem;
-      width: 120px;
-  }
-
-  .flow-card-4 img {
-      padding-top: 2rem;
-      width: 140px;
-  }
-
-  .flow-card-5 img {
-      width: 160px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .flow-card-container {
-      display: none;
-  }
-
-}
-
-/* flow card start */
-
-.ani-flow-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Styling the card */
-.ani-flow-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.ani-flow-card-box {
-  flex: 0 0 30%; /* Adjust the width as necessary */
-  max-width: 30%; /* Prevents cards from exceeding this width */
-  min-width: 200px; /* Ensures cards don't get too small */
-}
-
-.ani-flow-card {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ani-flow-card-one {
-  background: rgb(216, 173, 253);
-}
-
-.ani-flow-card-two {
-  background: rgb(148, 181, 126);
-}
-
-.ani-flow-card-three {
-  background: rgb(101, 181, 182);
-}
-
-.ani-flow-card-four {
-  background: rgb(247, 163, 31);
-}
-
-.ani-flow-card-five {
-  background: rgb(242, 93, 60);
-}
-
-.ani-flow-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.ani-flow-card h4 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 15px;
-  color: white;
-}
-
-.ani-flow-card p {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: white;
-}
-
-/* Icon styling */
-.ani-icon-container {
-  font-size: 60px; /* Increased size of the icons */
-  color: white; /* Color of the icons */
-  margin-bottom: 15px; /* Space between icon and text */
-}
-
-/* Hide the section by default */
-@media (max-width: 1400px) {
-  .ani-flow-events {
-      display: none; /* Show on small screens */
-  }
-}
-
-/* Show on small screens */
-@media (max-width: 768px) {
-  .ani-flow-events {
-      display: block; /* Show on small screens */
-  }
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .ani-flow-card-box {
-      flex: 0 0 48%;
-      max-width: 48%;
-  }
-}
-
-@media (max-width: 576px) {
-  .ani-flow-card-box {
-      flex: 0 0 100%;
-      max-width: 100%;
-  }
-}
-
-/* flow card end */
-
-/* ===================================== flow animation css End  ================================== */
-
-
 /* ===================================== footer css start  ================================== */
 
 
@@ -2584,8 +1770,9 @@ footer {
 .credits {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Centering all items */
-  align-items: center; /* Centering items vertically */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 2rem;
   background-color: #1e1e1e;
   border-radius: 1rem;
@@ -2599,15 +1786,16 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  text-align: center; /* Center align heading */
+  flex: 1 100%;
+  text-align: center;
 }
 
 .developerImageContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  justify-content: center; /* Center align images */
-  flex-wrap: wrap; /* Allow images to wrap on small screens */
+  gap: 5px;
+  width: 100%;
 }
 
 .developer {
@@ -2633,22 +1821,23 @@ footer {
 .information {
   width: 100%;
   display: flex;
-  flex-direction: column; /* Center content vertically */
-  align-items: center; /* Center items */
-  text-align: center; /* Center text */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
 .pagesContainer {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
-  align-items: center; /* Center align elements */
+  text-align: left;
+  margin: 0 auto;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center align logo */
   margin-bottom: 1.5rem;
 }
 
@@ -2657,7 +1846,7 @@ footer {
   margin-right: 15px;
 }
 
-.contact-info {
+.contact-info ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -2667,6 +1856,7 @@ footer {
   margin-bottom: 0.8rem;
   color: #f0f0f0;
   font-size: 1rem;
+  text-align: center;
 }
 
 .contact-info a {
@@ -2689,6 +1879,7 @@ footer {
 
 .social-media a {
   color: white;
+  /* background: #ffcb33; */
   background-color: black;
   border-radius: 50%;
   padding: 0.75rem;
@@ -2701,7 +1892,33 @@ footer {
 }
 
 .social-media a:hover {
+  /* background: #ffd500; */
   transform: scale(1.2);
+}
+
+/* Footer Links */
+.footer_rightSection ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer_rightSection li {
+  margin-bottom: 0;
+}
+
+.footer_rightSection a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer_rightSection a:hover {
+  /* color: #ffd500; */
+  text-decoration: underline;
 }
 
 /* Mobile Responsiveness */
@@ -2711,15 +1928,32 @@ footer {
   }
 
   .credits {
-    padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
   }
 
   .information {
-    text-align: center; /* Center text on smaller screens */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .developer {
-    width: 70px;
-    height: 70px;
+  .pagesContainer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_rightSection {
+    margin-top: 2rem;
+  }
+
+  .social-media {
+    justify-content: center;
   }
 }
+
+
+
+/* footer end */

@@ -14,18 +14,6 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- map cdn links  -->
-  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-  <script type="text/javascript"
-    src="https://cdn.fusioncharts.com/fusioncharts/latest/maps/fusioncharts.india.js"></script>
-  <script type="text/javascript"
-    src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-
-
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -36,7 +24,7 @@
       <div class="flex gap-2 items-center">
         <a href="index.html"><img src="assets/images/barabari_logo.png"
             class="drop-shadow-lg w-[40px] h-[40px] cursor-pointer" alt="Barabari Logo" /></a>
-        <h1 class="font-bold hidden sm:block text-2xl drop-shadow-lg tracking-wider">Barabari Collective</h1>
+        <span class="font-bold hidden sm:block text-2xl drop-shadow-lg tracking-wider">Barabari Collective</span>
       </div>
       <div class="hidden md:flex gap-2">
         <!-- <a href="services.html"><button
@@ -77,8 +65,7 @@
                 Join Us
               </button>
             </a> -->
-            <a href="https://forms.gle/WcF55jH3LvK93GTs9"
-              class="peer-checked:animate__zoomInDown peer-checked:animate__delay-2s">
+            <a href="https://forms.gle/WcF55jH3LvK93GTs9" class="peer-checked:animate__zoomInDown peer-checked:animate__delay-2s">
               <button
                 class="bg-[#324498] hover:bg-[#3cc88f] text-white border border-[#ccc] px-3 py-1 font-semibold focus:outline-none">
                 Donate
@@ -179,58 +166,21 @@
 
   <!-- ******************** Slider Start ******************* -->
 
-  <div class="slider-container" id="slider-container">
+  <div class="slider-container mt-[70px]" id="slider-container">
     <div class="color-cover"></div>
-    <!-- <div class="btn-prev" onclick="handlePrev()">&lt;</div> -->
+    <div class="btn-prev" onclick="handlePrev()">&lt;</div>
     <div class="image-track" id="image-track"></div>
-    <!-- <div class="btn-next" onclick="handleNext()">&gt;</div> -->
+    <div class="btn-next" onclick="handleNext()">&gt;</div>
     <div class="slide-caption" id="slide-caption"></div>
-
-    <!-- New Center Buttons -->
-    <div class="button-container">
-      <button class="center-btn" id="btn1"><a href="https://docs.google.com/forms/d/e/1FAIpQLSegstDSVi8lFRdljM6PKb6Ee10MjGZr2EP8B2dDYrRW8tMNpg/viewform">Become A Mentor</a></button>
-    </div>
   </div>
-
   <!-- ******************** Slider End ******************* -->
-
-
-  <!-- ################# Mission Vision Start Here #######################--->
-
-
-  <section class="mission-vision">
-    <!-- Floating shapes -->
-    <div class="shape shape1"></div>
-    <div class="shape shape2"></div>
-    <div class="shape shape3"></div>
-    <div class="shape shape4"></div>
-
-    <div class="mission-vision-container">
-        <div class="mv-text left">
-            <h1>Barabari Rozgaar Program</h1>
-            <p><i class="fa-solid fa-caret-right"></i> Candidates from marginalized communities get mentored by esteemed tech professionals toward their first tech job/internship.</p>
-            <p><i class="fa-solid fa-caret-right"></i> We help candidates build a strong tech foundation, proficient communication skills, create an elaborate work profile, and network with industry leaders.</p>
-            <p><i class="fa-solid fa-caret-right"></i> Our core focus is on remote jobs and freelancing opportunities that help candidates from rural low-income families join the tech workforce smoothly.</p>
-            <p><i class="fa-solid fa-caret-right"></i> Working to make quality tech opportunities accessible to all.</p>
-        </div>
-        <div class="mv-img right">
-            <div class="slider">
-                <img src="./assets/images/online_class_1.png" alt="Image 1" class="active">
-                <img src="./assets/images/online_class_11.jpeg" alt="Image 2">
-                <img src="./assets/images/onsite_class_10.jpeg" alt="Image 3">
-            </div>
-        </div>
-    </div>
-</section>
-
-  <!-- ################# Mission Vision End Here #######################--->
 
   <!--  ************************* About Us Starts Here ************************** -->
 
-  <div class="about-us">
-    <div class="about-container">
-      <div class="about-row">
-        <div class="about-column">
+  <div class="about-us container-fluid">
+    <div class="container">
+      <div class="row natur-row no-margin text-center">
+        <div class="col-md-3 col-sm-6 mb-4">
           <a href="https://forms.gle/7bn7XQfz3PzmRCae8">
             <div class="about-qcard">
               <i class="fas fa-user volunteer-icon"></i>
@@ -238,7 +188,7 @@
             </div>
           </a>
         </div>
-        <div class="about-column">
+        <div class="col-md-3 col-sm-6 mb-4">
           <a href="https://forms.gle/KGMW8KVSeTxM3pPs7">
             <div class="about-qcard">
               <i class="fas fa-chalkboard mentor-icon"></i>
@@ -246,7 +196,7 @@
             </div>
           </a>
         </div>
-        <div class="about-column">
+        <div class="col-md-3 col-sm-6 mb-4">
           <a href="https://forms.gle/WcF55jH3LvK93GTs9">
             <div class="about-qcard">
               <i class="fas fa-donate donate-icon"></i>
@@ -254,7 +204,7 @@
             </div>
           </a>
         </div>
-        <div class="about-column">
+        <div class="col-md-3 col-sm-6 mb-4">
           <a href="services.html">
             <div class="about-qcard">
               <i class="fas fa-hands-helping hire-icon"></i>
@@ -266,41 +216,72 @@
     </div>
   </div>
 
-  <!--  ************************* About Us End Here ************************** -->
+  <!-- ################# Mission Vision Start Here #######################--->
 
-  <!-- ################# Our Supported Start #######################--->
-
-  <section class="Supportive">
-    <h1>Our Supporter</h1>
-    <div class="Supportive-card-container">
-        <div class="Supportive-card">
-            <img src="./assets/images/the circle.png" alt="Technology 1">
+  <section class="container-fluid mission-vision">
+    <div class="container">
+      <div class="row mission">
+        <div class="col-md-6 mv-det">
+          <h1 class="text-3xl font-bold mb-3">Barabari Rozgaar Program</h1>
+          <p>
+            1. Candidates from marginalized communities get mentored esteemed
+            tech professional toward their first tech job/intership
+          </p>
+          <p>
+            2. We help candidates build a strong tech foundation, build
+            profecient communication skills, create an elaborate work profile
+            and network with industry leaders.
+          </p>
+          <p>
+            3. Our core focus is on remote jobs and freelancing opportunites
+            that help candidates from rural low-income families join the tech
+            workforce smoothly
+          </p>
+          <p>
+            4. Working to make quality tech opportunites accessible to all
+          </p>
         </div>
-        <div class="Supportive-card">
-            <img src="./assets/images/the nudge.png" alt="Technology 2">
+        <div class="col-md-6 mv-img mt-[20px]">
+          <img src="assets/images/onsite_class_8.jpeg" alt="" />
         </div>
-        <div class="Supportive-card">
-            <img src="./assets/images/pilani.png" alt="Technology 3">
+      </div>
+      <!-- <div class="row vision">
+        <div class="col-md-6 mv-img">
+          <img class="onsiteClass" src="assets/images/onsite_class_3.jpeg" alt="" />
         </div>
+        <div class="col-md-6 mv-det">
+          <h1>Barabari Labs</h1>
+          <p>
+            1. An afterschool learners and makers space to create first
+            principles problem solvers
+          </p>
+          <p>
+            2. Enable candidates to develop design thinking, problem solving
+            ability, understanding of industry relevant tools and
+            communitcation skills.
+          </p>
+          <p>
+            3. Helping them to access paid industry projects leading to
+            sustainable livelihoods.
+          </p>
+        </div> -->
+      </div>
     </div>
-</section>
-
-  <!-- ################# Our Supported End #######################--->
-
-
+  </section>
 
   <!-- ################# Events Start Here#######################--->
 
   <!-- ################# Our-partners Section Start #######################--->
 
-  <section class="our-partners-section">
-  <h2 class="partners-heading">Our Partners</h2>
   <div class="our-partners">
     <div class="our-partners-slide">
       <!-- Card 1 -->
       <div class="our-partners-card">
         <div class="card-image">
           <img src="./assets/images/collaborators/gsc_navi_mumbai.png" alt="Image 1" />
+        </div>
+        <div class="card-text">
+          <h3>Global Shapers Community</h3>
         </div>
       </div>
 
@@ -309,12 +290,18 @@
         <div class="card-image">
           <img src="./assets/images/collaborators/kriti.png" alt="Image 2" />
         </div>
+        <div class="card-text">
+          <h3>Kriti</h3>
+        </div>
       </div>
 
       <!-- Card 3 -->
       <div class="our-partners-card">
         <div class="card-image">
           <img src="./assets/images/collaborators/medha.jpeg" alt="Image 3" />
+        </div>
+        <div class="card-text">
+          <h3>Medha</h3>
         </div>
       </div>
 
@@ -323,32 +310,42 @@
         <div class="card-image">
           <img src="./assets/images/collaborators/ohoq.png" alt="Image 4" />
         </div>
+        <div class="card-text">
+          <h3>Official Humans Of Queer</h3>
+        </div>
       </div>
 
       <!-- Card 5 -->
       <div class="our-partners-card">
         <div class="card-image">
-          <img src="./assets/images/collaborators/raksha.png" alt="Image 5" />
+          <img src="./assets/images/collaborators/raksha.png" alt="Image 4" />
+        </div>
+        <div class="card-text">
+          <h3>Raksha</h3>
         </div>
       </div>
 
       <!-- Card 6 -->
       <div class="our-partners-card">
         <div class="card-image">
-          <img src="./assets/images/collaborators/saksharta_foundation.png" alt="Image 6" />
+          <img src="./assets/images/collaborators/saksharta_foundation.png" alt="Image 4" />
+        </div>
+        <div class="card-text">
+          <h3>Saksharta Foundation</h3>
         </div>
       </div>
 
       <!-- Card 7 -->
       <div class="our-partners-card">
         <div class="card-image">
-          <img src="./assets/images/collaborators/sampoorshiksha.jpeg" alt="Image 7" />
+          <img src="./assets/images/collaborators/sampoorshiksha.jpeg" alt="Image 4" />
+        </div>
+        <div class="card-text">
+          <h3>Sampoorna Shiksha</h3>
         </div>
       </div>
     </div>
   </div>
-</section>
-
 
   <!-- ################# Our-partners Section Start #######################--->
 
@@ -408,226 +405,112 @@
     </div>
   </div>
   <!-- ################# Charity Number End #######################--->
-  
 
-  <!-- team Start -->
+  <!-- ################# Our Blog Starts Here#######################--->
 
-  <section class="team-section">
-    <h2>Our Team</h2>
-    <p>Meet the people who make the magic happen!</p>
-    <div class="team-container">
-
-      <!-- Team Member 1 -->
-      <div class="team-card">
-        <div class="team-member">
-          <div class="front">
-            <div class="team-shape team-shape1"></div>
-            <div class="team-shape team-shape2"></div>
-            <div class="team-shape team-shape3"></div>
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Barabari">
-            <h3>Barabari</h3>
-            <p>Lead Designer</p>
+  <section class="our-blog">
+    <div class="container">
+      <div class="row session-title">
+        <h2>Our Centers</h2>
+        <p>Glimpses of the communities we work with</p>
+      </div>
+      <div class="blog-row row">
+        <div class="col-md-4 col-sm-6">
+          <div class="single-blog">
+            <figure>
+              <img class="onsiteCenter" src="assets/images/centers/andheri.jpg" alt="" />
+            </figure>
+            <div class="blog-detail">
+              <small>Digital Literacy Center</small>
+              <h4>Andheri, Mumbai</h4>
+              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p> -->
+              <!-- <div class="link">
+									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div> -->
+            </div>
           </div>
-          <div class="back">
-            <h4>Barabari</h4>
-            <p>Specializing in crafting beautiful and functional designs for over 10 years.</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="single-blog">
+            <figure>
+              <img class="onsiteCenter" src="assets/images/online_class_11_trial.jpeg" alt="" />
+            </figure>
+            <div class="blog-detail">
+              <small>Design Education Center</small>
+              <h4>Grant Road, Mumbai</h4>
+              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p> -->
+              <!-- <div class="link">
+									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="single-blog">
+            <figure>
+              <img class="onsiteCenter" src="assets/images/onsite_class_10_trial.jpeg" alt="" />
+            </figure>
+            <div class="blog-detail">
+              <small>Digital Literacy Center</small>
+              <h4>Nerul, Navi Mumbai</h4>
+              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
+								<div class="link">
+									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="single-blog">
+            <figure>
+              <img class="onsiteCenter" src="assets/images/centers/hyderabad.jpeg" alt="" />
+            </figure>
+            <div class="blog-detail">
+              <small>Tech Rozgaar Center</small>
+              <h4>Toli Chowki, Hyderabad</h4>
+              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
+								<div class="link">
+									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="single-blog">
+            <figure>
+              <img class="onsiteCenter" src="assets/images/onsite_class_9.jpeg" alt="" />
+            </figure>
+            <div class="blog-detail">
+              <small>Tech Rozgaar Center</small>
+              <h4>Vile Parle, Mumbai</h4>
+              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
+								<div class="link">
+									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="single-blog">
+            <figure>
+              <img class="onsiteCenter" src="assets/images/online_class_1_trial.png" alt="" />
+            </figure>
+            <div class="blog-detail">
+              <small>Tech Rozgaar Center(Online)</small>
+              <h4>U.P</h4>
+              <!-- <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
+								<div class="link">
+									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div> -->
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Team Member 2 -->
-      <div class="team-card">
-        <div class="team-member">
-          <div class="front">
-            <div class="team-shape team-shape1"></div>
-            <div class="team-shape team-shape2"></div>
-            <div class="team-shape team-shape3"></div>
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Barabari">
-            <h3>Barabari</h3>
-            <p>Project Manager</p>
-          </div>
-          <div class="back">
-            <h4>Barabari</h4>
-            <p>Ensuring everything runs smoothly, on time, and within budget.</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 3 -->
-      <div class="team-card">
-        <div class="team-member">
-          <div class="front">
-            <div class="team-shape team-shape1"></div>
-            <div class="team-shape team-shape2"></div>
-            <div class="team-shape team-shape3"></div>
-            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Barabari">
-            <h3>Barabari</h3>
-            <p>Senior Developer</p>
-          </div>
-          <div class="back">
-            <h4>Barabari</h4>
-            <p>Bringing creative ideas to life with cutting-edge code and solutions.</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 4 -->
-      <div class="team-card">
-        <div class="team-member">
-          <div class="front">
-            <div class="team-shape team-shape1"></div>
-            <div class="team-shape team-shape2"></div>
-            <div class="team-shape team-shape3"></div>
-            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Barabari">
-            <h3>Barabari</h3>
-            <p>UI/UX Designer</p>
-          </div>
-          <div class="back">
-            <h4>Barabari</h4>
-            <p>Designing intuitive interfaces and exceptional user experiences.</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- team End -->
-
-  <!-- map Start  -->
-
-  <center>
-    <div class="map-container" style="position: relative;"> <!-- Added position: relative -->
-        <div id="indian-map" style="position: relative;">Just a Second!</div> <!-- Adjusted this -->
-        <div id="box"></div>
-    </div>
-</center>
-  <!-- map End  -->
-
-
-  <!-- flow-chart Start -->
-
-  <!-- Image container -->
-  <div class="flow-card-container" id="image-section">
-    <div class="flow-card flow-card-1">
-        <img src="./assets/images/Untitled-5.png" alt="Image 1">
-        <div class="flow-card-text flow-card-text-1">
-            <h3 class="font-bold">Digital Literacy</h3>
-            <p>Students from under-resources universities and partner NGOs</p>
-        </div>
-    </div>
-    <div class="flow-card flow-card-2">
-        <img src="./assets/images/Untitled-4.png" alt="Image 2">
-        <div class="flow-card-text flow-card-text-2">
-            <h3 class="font-bold">Project Courses</h3>
-            <p>Building skills by industry projects</p>
-        </div>
-    </div>
-    <div class="flow-card flow-card-3">
-        <img src="./assets/images/Untitled-3.png" alt="Image 3">
-        <div class="flow-card-text flow-card-text-3">
-            <h3 class="font-bold">Mentorship</h3>
-            <p>Working directly under industry professional domain experts</p>
-        </div>
-    </div>
-    <div class="flow-card flow-card-4">
-        <img src="./assets/images/Untitled-2.png" alt="Image 4">
-        <div class="flow-card-text flow-card-text-4">
-            <h3 class="font-bold">Apprenticeship Program</h3>
-            <p>Paid industry freelancing projects to build experience</p>
-        </div>
-    </div>
-    <div class="flow-card flow-card-5">
-        <img src="./assets/images/Untitled-1.png" alt="Image 5">
-        <div class="flow-card-text flow-card-text-5">
-            <h3 class="font-bold">Employment Creation</h3>
-            <ul start="dot">
-              <li>- Internships</li>
-              <li>- Full-Time Jobs</li>
-              <li>- Self-Employment</li>
-            </ul>
-            <!-- <p>This is the description for Image 5. It provides additional context or information.</p> -->
-        </div>
-    </div>
-</div>
-
-<!-- flow-card start -->
-
-<section class="ani-flow-events">
-    <div class="ani-flow-container">
-        <div class="ani-flow-row">
-            <div class="ani-flow-card-box">
-                <div class="ani-flow-card ani-flow-card-one">
-                    <div class="ani-icon-container">
-                        <i class="fa-solid fa-magnet"></i>
-                    </div>
-                    <h4>GSC Navi Mumbai</h4>
-                    <p>Building strong community ties through education.</p>
-                </div>
-            </div>
-            <div class="ani-flow-card-box">
-                <div class="ani-flow-card ani-flow-card-two">
-                    <div class="ani-icon-container">
-                        <i class="fa-solid fa-chart-simple"></i>
-                    </div>
-                    <h4>OHOQ Foundation</h4>
-                    <p>Empowering lives through social initiatives.</p>
-                </div>
-            </div>
-            <div class="ani-flow-card-box">
-                <div class="ani-flow-card ani-flow-card-three">
-                    <div class="ani-icon-container">
-                        <i class="fa-solid fa-user-plus"></i>
-                    </div>
-                    <h4>Saksharta Foundation</h4>
-                    <p>Promoting literacy and education for all.</p>
-                </div>
-            </div>
-            <div class="ani-flow-card-box">
-                <div class="ani-flow-card ani-flow-card-four">
-                    <div class="ani-icon-container">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h4>Saampoorna Shikhsha</h4>
-                    <p>Comprehensive educational programs for youth.</p>
-                </div>
-            </div>
-            <div class="ani-flow-card-box">
-                <div class="ani-flow-card ani-flow-card-five">
-                    <div class="ani-icon-container">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Kriti Social Works</h4>
-                    <p>Uniting communities for social change.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- flow card end -->
-
-  <!-- flow-chart End -->
-
-
   <!-- testimonial-section start  -->
-  <div class="testimonial-section">
+  <!-- <div class="testimonial-section">
       <div class="one"></div>
       <div class="two"></div>
 
@@ -637,6 +520,9 @@
             <p>
               <i class="fas fa-quote-left"></i> Discovering Product Video
               Examples was a <strong>game-changer</strong> for our product
+              launch! The platform saved us
+              <strong>countless hours</strong> searching for inspiring videos.
+              With their incredible library, we found the perfect inspiration
               for our Product Hunt launch in no time. Product Video Examples is
               truly the <strong>ultimate site</strong> creative SaaS video!
               <i class="fas fa-quote-right"></i>
@@ -658,6 +544,9 @@
             <p>
               <i class="fas fa-quote-left"></i> Discovering Product Video
               Examples was a <strong>game-changer</strong> for our product
+              launch! The platform saved us
+              <strong>countless hours</strong> searching for inspiring videos.
+              With their incredible library, we found the perfect inspiration
               for our Product Hunt launch in no time. Product Video Examples is
               truly the <strong>ultimate site</strong> creative SaaS video!
               <i class="fas fa-quote-right"></i>
@@ -679,6 +568,9 @@
             <p>
               <i class="fas fa-quote-left"></i> Discovering Product Video
               Examples was a <strong>game-changer</strong> for our product
+              launch! The platform saved us
+              <strong>countless hours</strong> searching for inspiring videos.
+              With their incredible library, we found the perfect inspiration
               for our Product Hunt launch in no time. Product Video Examples is
               truly the <strong>ultimate site</strong> creative SaaS video!
               <i class="fas fa-quote-right"></i>
@@ -700,6 +592,9 @@
             <p>
               <i class="fas fa-quote-left"></i> Discovering Product Video
               Examples was a <strong>game-changer</strong> for our product
+              launch! The platform saved us
+              <strong>countless hours</strong> searching for inspiring videos.
+              With their incredible library, we found the perfect inspiration
               for our Product Hunt launch in no time. Product Video Examples is
               truly the <strong>ultimate site</strong> creative SaaS video!
               <i class="fas fa-quote-right"></i>
@@ -716,69 +611,88 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   <!-- testimonial-section start  -->
 
-
-
   <!-- footer-section start  -->
-<footer>
-  <div class="footer">
-    <div class="credits">
-      <h2>This platform is built by students of <br />our program!</h2>
-      <div class="developerImageContainer">
-        <a title="Trisha Das" href="https://www.linkedin.com/in/trisha-das1308/" target="_blank"
-          class="developer trisha">
-          <img src="./assets/images/trisha.jpg" alt="Trisha" />
-        </a>
-        <a title="Mayank Gupta" href="https://www.linkedin.com/in/mayank-gupta-752328173/" target="_blank"
-          class="developer mayank">
-          <img src="./assets/images/mayank.jpg" alt="Mayank" />
-        </a>
-        <a title="Anchit Julaniya" href="https://www.linkedin.com/in/anchit-julaniya-b13632175/" target="_blank"
-          class="developer anchit">
-          <img src="./assets/images/anchit.jpg" alt="Anchit" />
-        </a>
+  <footer>
+    <div class="footer">
+      <div class="credits">
+        <h2>This platform is built by students of <br />our program!</h2>
+        <div class="developerImageContainer">
+          <a title="Trisha Das" href="https://www.linkedin.com/in/trisha-das1308/" target="_blank"
+            class="developer trisha">
+            <img src="./assets/images/trisha.jpg" alt="Trisha" />
+          </a>
+          <a title="Mayank Gupta" href="https://www.linkedin.com/in/mayank-gupta-752328173/" target="_blank"
+            class="developer mayank">
+            <img src="./assets/images/mayank.jpg" alt="Mayank" />
+          </a>
+          <a title="Anchit Julaniya" href="https://www.linkedin.com/in/anchit-julaniya-b13632175/" target="_blank"
+            class="developer anchit">
+            <img src="./assets/images/anchit.jpg" alt="Anchit" />
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Contact Information Section -->
-    <div class="information">
-      <div class="pagesContainer">
-        <div class="footer-logo">
-          <img src="./assets/images/barabari_logo.png" alt="Rozgar" />
-          <h2 class="text-xl font-extrabold text-[#f9f9f9]">Barabari Collective</h2>
-        </div>
-        <ul class="contact-info">
-          <li>
-            <a href="tel:+918639322365">
-              <i class="fas fa-phone-volume"></i> +91 8639322365
+      <!-- Contact Information Section -->
+      <div class="information">
+        <div class="pagesContainer">
+          <div class="footer-logo">
+            <img src="./assets/images/barabari_logo.png" alt="Rozgar" />
+            <h2 class="text-xl font-extrabold text-[#f9f9f9]">Barabari Collective</h2>
+          </div>
+          <ul class="contact-info">
+            <li>
+              <a href="tel:+918639322365">
+                <i class="fas fa-phone-volume"></i> +91 8639322365
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@barabaricollective.org">
+                <i class="far fa-envelope"></i> info@barabaricollective.org
+              </a>
+            </li>
+          </ul>
+          <div class="social-media">
+            <a href="https://x.com/BarabariProject" target="_blank">
+              <i class="fab fa-twitter"></i>
             </a>
-          </li>
-          <li>
-            <a href="mailto:info@barabaricollective.org">
-              <i class="far fa-envelope"></i> info@barabaricollective.org
+            <a href="https://www.instagram.com/thebarabariproject/" target="_blank">
+              <i class="fab fa-instagram"></i>
             </a>
-          </li>
-        </ul>
-        <div class="social-media">
-          <a href="https://x.com/BarabariProject" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/thebarabariproject/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/the-barabari-collective/" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+            <a href="https://www.linkedin.com/company/the-barabari-collective/" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- About Us Section -->
+        <!-- <div class="text-white font-semibold">
+          <ul>
+            <li><a href="about_us.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+          </ul>
+        </div> -->
+
+        <!-- Links Section -->
+        <!-- <div class="footer_rightSection">
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div> -->
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 
 </body>
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
 
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
